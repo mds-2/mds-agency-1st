@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme:dark;scroll-behavior:smooth;">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MDS Agency — We Build Brands That Get Noticed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:         #1F1F1F;
+  --bg2:        #2E2E2E;
+  --bg3:        #333333;
+  --border:     rgba(240,237,230,0.08);
+  --border2:    rgba(240,237,230,0.12);
+  --text:       #F0EDE6;
+  --text2:      rgba(240,237,230,0.55);
+  --text3:      rgba(240,237,230,0.32);
+  --accent:     #C4AE92;
+  --accent2:    #D4C4B0;
+  --accent3:    #E0D4C0;
+  --accent-dim: rgba(196,174,146,0.12);
+  --accent-glow:rgba(196,174,146,0.3);
+  --radius:     12px;
+  --radius-lg:  16px;
+  --sans:       'DM Sans', sans-serif;
+  --mono:       'DM Mono', monospace;
+}
+html{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{min-height:100vh;overflow-x:hidden;background-image:radial-gradient(rgba(196,174,146,0.06) 1px,transparent 1px);background-size:32px 32px;background-position:0 0;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;font-family:inherit;}
+img{display:block;max-width:100%;}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 32px;height:60px;
+  background:rgba(31,31,31,0.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:-0.01em;}
+.nav-logo img{flex-shrink:0;filter:invert(1) brightness(1.8);}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-links a{
+  padding:6px 12px;border-radius:8px;font-size:14px;color:var(--text2);
+  transition:color 0.15s,background 0.15s;
+}
+.nav-links a:hover{color:var(--text);background:rgba(240,237,230,0.06);}
+.nav-right{display:flex;align-items:center;gap:8px;}
+.btn-ghost{
+  padding:6px 14px;border-radius:8px;font-size:14px;color:var(--text2);
+  background:transparent;border:none;
+  transition:color 0.15s,background 0.15s;
+}
+.btn-ghost:hover{color:var(--text);background:rgba(240,237,230,0.06);}
+.btn-primary{
+  padding:6px 16px;border-radius:8px;font-size:14px;font-weight:500;
+  background:var(--accent);color:var(--bg);border:none;
+  transition:opacity 0.15s;
+}
+.btn-primary:hover{opacity:0.9;}
+
+/* ─── HERO ─── */
+.hero{
+  padding:140px 32px 80px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);
+  width:1200px;height:800px;
+  background:radial-gradient(ellipse at 50% 35%,rgba(196,174,146,0.14) 0%,rgba(196,174,146,0.06) 30%,transparent 65%);
+  pointer-events:none;z-index:0;
+}
+.hero::after{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:
+    radial-gradient(ellipse 700px 500px at 15% 70%,rgba(196,174,146,0.06) 0%,transparent 70%),
+    radial-gradient(ellipse 500px 350px at 85% 15%,rgba(196,174,146,0.05) 0%,transparent 70%);
+  pointer-events:none;z-index:0;
+}
+.hero>*{position:relative;z-index:1;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:5px 12px 5px 6px;border-radius:999px;
+  background:rgba(196,174,146,0.1);border:1px solid rgba(196,174,146,0.25);
+  font-size:13px;color:var(--accent3);margin-bottom:28px;
+  font-family:var(--mono);letter-spacing:0.04em;
+}
+.hero-badge-dot{
+  width:18px;height:18px;border-radius:999px;
+  background:var(--accent);display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:var(--bg);
+}
+.hero h1{
+  font-size:clamp(42px,6vw,72px);font-weight:600;letter-spacing:-0.03em;
+  line-height:1.08;max-width:820px;margin:0 auto 20px;
+}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero-sub{
+  font-size:17px;color:var(--text2);max-width:520px;margin:0 auto 36px;line-height:1.65;font-weight:300;
+}
+.hero-ctas{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;}
+.btn-lg{
+  padding:11px 24px;border-radius:10px;font-size:15px;font-weight:500;
+  border:none;cursor:pointer;font-family:inherit;transition:opacity 0.15s,transform 0.15s;
+}
+.btn-lg:hover{opacity:0.88;transform:translateY(-1px);}
+.btn-lg-accent{background:var(--accent);color:var(--bg);}
+.btn-lg-outline{
+  background:rgba(240,237,230,0.06);color:var(--text);
+  border:1px solid var(--border2);
+}
+.hero-note{font-size:13px;color:var(--text3);margin-top:14px;font-family:var(--mono);letter-spacing:0.04em;}
+
+/* ─── HERO MOCKUP ─── */
+.hero-mockup{
+  margin:56px auto 0;max-width:1100px;padding:0 32px;position:relative;
+}
+.hero-mockup::before{
+  content:'';position:absolute;top:-40px;left:50%;transform:translateX(-50%);
+  width:900px;height:220px;
+  background:radial-gradient(ellipse,rgba(196,174,146,0.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+.mockup-window{
+  border-radius:var(--radius-lg);border:1px solid var(--border2);
+  background:var(--bg2);overflow:hidden;
+  box-shadow:0 0 0 1px rgba(196,174,146,0.12),0 40px 100px rgba(0,0,0,0.7),0 0 160px rgba(196,174,146,0.05);
+}
+.mockup-bar{
+  height:44px;display:flex;align-items:center;gap:8px;padding:0 16px;
+  background:var(--bg3);border-bottom:1px solid var(--border);
+}
+.mockup-dot{width:12px;height:12px;border-radius:50%;}
+.mockup-nav-tabs{display:flex;align-items:center;gap:2px;margin-left:16px;}
+.mockup-tab{font-size:12px;color:var(--text3);padding:4px 12px;border-radius:6px;font-family:var(--mono);}
+.mockup-tab.active{background:rgba(240,237,230,0.06);color:var(--text);}
+.mockup-canvas{
+  min-height:360px;padding:32px 40px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(196,174,146,0.04) 0%,transparent 60%);
+  background-color:var(--bg);
+  position:relative;overflow:hidden;
+}
+.mockup-canvas-grid{
+  position:absolute;inset:0;
+  background-image:radial-gradient(rgba(240,237,230,0.04) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+.mockup-nodes{display:flex;align-items:center;justify-content:center;gap:32px;position:relative;z-index:1;flex-wrap:wrap;}
+.mockup-node{
+  background:var(--bg2);border:1px solid var(--border2);
+  border-radius:12px;padding:16px 20px;min-width:160px;
+  box-shadow:0 4px 24px rgba(0,0,0,0.4);
+  position:relative;
+}
+.mockup-node-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.mockup-node-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.mockup-node-name{font-size:13px;font-weight:500;}
+.mockup-node-sub{font-size:11px;color:var(--text3);font-family:var(--mono);}
+.mockup-node-status{display:flex;align-items:center;gap:6px;margin-top:8px;}
+.status-dot{width:7px;height:7px;border-radius:50%;}
+.status-green{background:#22c55e;}
+.status-yellow{background:#eab308;}
+.status-pulse{animation:pulse-status 2s ease-in-out infinite;}
+@keyframes pulse-status{0%,100%{opacity:1;}50%{opacity:0.5;}}
+.mockup-connector{
+  position:absolute;top:50%;width:32px;height:1px;
+  background:linear-gradient(90deg,rgba(196,174,146,0.4),rgba(196,174,146,0.15));
+  left:100%;transform:translateY(-50%);
+}
+.mockup-node-metric{
+  font-size:11px;color:var(--text3);padding:4px 0;border-top:1px solid var(--border);margin-top:8px;
+  display:flex;justify-content:space-between;font-family:var(--mono);
+}
+.mockup-node-metric span:last-child{color:var(--text2);}
+.mockup-node.featured{border-color:rgba(196,174,146,0.35);box-shadow:0 0 0 1px rgba(196,174,146,0.12),0 4px 24px rgba(0,0,0,0.4),0 0 32px rgba(196,174,146,0.06);}
+
+/* ─── TRUSTED ─── */
+.trusted{
+  padding:60px 32px;text-align:center;
+  border-top:1px solid var(--border);
+}
+.trusted-label{font-size:12px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:32px;font-family:var(--mono);}
+.trusted-logos{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:40px 56px;max-width:900px;margin:0 auto;
+}
+.logo-item{font-size:16px;font-weight:600;color:rgba(240,237,230,0.18);letter-spacing:-0.01em;font-family:var(--mono);}
+
+/* ─── FEATURES ─── */
+.features{padding:100px 32px;max-width:1200px;margin:0 auto;}
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;}
+.feature-card{
+  padding:48px;background:var(--bg2);
+  border:1px solid var(--border);
+  position:relative;overflow:hidden;
+  transition:background 0.2s;
+}
+.feature-card:hover{background:var(--bg3);}
+.feature-card.wide{grid-column:span 2;}
+.feature-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(196,174,146,0.4),transparent);
+  opacity:0;transition:opacity 0.3s;
+}
+.feature-card:hover::before{opacity:1;}
+.feature-icon{
+  width:44px;height:44px;border-radius:10px;
+  background:var(--accent-dim);border:1px solid rgba(196,174,146,0.18);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+}
+.feature-tag{
+  display:inline-block;font-size:11px;color:var(--accent3);
+  letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;font-weight:400;font-family:var(--mono);
+}
+.feature-card h3{font-size:22px;font-weight:600;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.25;}
+.feature-card p{font-size:15px;color:var(--text2);line-height:1.65;max-width:420px;}
+.feature-visual{margin-top:32px;}
+
+/* Terminal / brief mockup */
+.terminal{
+  border-radius:10px;border:1px solid var(--border);
+  background:#191919;overflow:hidden;font-family:var(--mono);font-size:13px;
+}
+.terminal-bar{
+  height:36px;display:flex;align-items:center;gap:6px;padding:0 14px;
+  background:rgba(240,237,230,0.03);border-bottom:1px solid var(--border);
+}
+.terminal-body{padding:16px 18px;display:flex;flex-direction:column;gap:6px;}
+.term-line{display:flex;gap:10px;}
+.term-prompt{color:var(--accent);}
+.term-cmd{color:var(--text);}
+.term-output{color:var(--text3);padding-left:4px;}
+.term-success{color:#22c55e;}
+.term-cursor{display:inline-block;width:8px;height:14px;background:var(--accent);border-radius:2px;animation:blink 1s steps(1) infinite;vertical-align:middle;}
+@keyframes blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
+
+/* Brand ecosystem graph */
+.net-graph{
+  border-radius:10px;border:1px solid var(--border);background:var(--bg);
+  padding:20px;min-height:180px;position:relative;overflow:hidden;
+}
+.net-nodes{display:flex;align-items:center;justify-content:space-around;height:140px;position:relative;}
+.net-node{
+  width:52px;height:52px;border-radius:50%;
+  border:1px solid rgba(196,174,146,0.25);
+  background:var(--accent-dim);display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:500;color:var(--accent3);position:relative;z-index:2;font-family:var(--mono);
+}
+.net-line{
+  position:absolute;top:50%;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(196,174,146,0.25),transparent);
+}
+.net-label{font-size:11px;color:var(--text3);text-align:center;margin-top:4px;font-family:var(--mono);}
+
+/* Results stream */
+.log-stream{
+  border-radius:10px;border:1px solid var(--border);background:#191919;
+  padding:16px 18px;font-family:var(--mono);font-size:12px;
+  display:flex;flex-direction:column;gap:5px;
+}
+.log-line{display:flex;gap:12px;align-items:baseline;}
+.log-time{color:var(--text3);flex-shrink:0;}
+.log-level-info{color:var(--accent);}
+.log-level-warn{color:#fbbf24;}
+.log-level-err{color:#f87171;}
+.log-msg{color:var(--text2);}
+
+/* Project phases */
+.deploy-steps{display:flex;flex-direction:column;gap:8px;}
+.deploy-step{
+  display:flex;align-items:center;gap:12px;padding:12px 16px;
+  border-radius:8px;background:rgba(240,237,230,0.02);border:1px solid var(--border);
+}
+.step-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;}
+.step-done{background:rgba(34,197,94,0.12);color:#22c55e;border:1px solid rgba(34,197,94,0.25);}
+.step-active{background:var(--accent-dim);color:var(--accent3);border:1px solid rgba(196,174,146,0.25);}
+.step-pending{background:rgba(240,237,230,0.04);color:var(--text3);border:1px solid var(--border);}
+.step-name{font-size:13px;font-weight:500;}
+.step-time{font-size:12px;color:var(--text3);margin-left:auto;font-family:var(--mono);}
+.step-bar{flex-grow:1;height:2px;background:rgba(240,237,230,0.06);border-radius:2px;overflow:hidden;}
+.step-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;animation:fillbar 2s ease-in-out infinite;}
+@keyframes fillbar{0%{width:0%;}60%{width:100%;}100%{width:100%;}}
+
+/* ─── SECTION FULL WIDTH ─── */
+.section-full{
+  padding:100px 32px;border-top:1px solid var(--border);
+}
+.section-full-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.section-full-inner.reverse{direction:rtl;}
+.section-full-inner.reverse>*{direction:ltr;}
+.section-label{font-size:12px;color:var(--accent3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;font-weight:400;font-family:var(--mono);}
+.section-h2{font-size:clamp(28px,3.5vw,40px);font-weight:600;letter-spacing:-0.025em;line-height:1.15;margin-bottom:16px;}
+.section-p{font-size:16px;color:var(--text2);line-height:1.7;margin-bottom:28px;}
+.section-link{
+  display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;
+  color:var(--accent2);transition:gap 0.15s;font-family:var(--mono);
+}
+.section-link:hover{gap:10px;}
+
+/* ─── CTA BANNER ─── */
+.cta-section{
+  padding:100px 32px;text-align:center;position:relative;overflow:hidden;
+  border-top:1px solid var(--border);
+  background:linear-gradient(180deg, #1c1c1c 0%, #171717 60%, #1a1919 100%);
+}
+.cta-section::before{
+  content:'';position:absolute;bottom:-100px;left:50%;transform:translateX(-50%);
+  width:700px;height:500px;
+  background:radial-gradient(ellipse,rgba(196,174,146,0.12) 0%,transparent 65%);
+  pointer-events:none;
+}
+.cta-section::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;
+  opacity:0.025;
+}
+.cta-section>*{position:relative;z-index:1;}
+.cta-section h2{font-size:clamp(32px,4vw,52px);font-weight:600;letter-spacing:-0.03em;margin-bottom:16px;}
+.cta-section p{font-size:17px;color:var(--text2);max-width:480px;margin:0 auto 36px;font-weight:300;}
+
+/* ─── FOOTER ─── */
+footer{
+  border-top:1px solid var(--border);padding:60px 32px 40px;
+}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px;}
+.footer-brand p{font-size:14px;color:var(--text3);margin-top:12px;line-height:1.65;max-width:260px;}
+.footer-col h4{font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px;font-family:var(--mono);}
+.footer-col a{display:block;font-size:14px;color:var(--text2);margin-bottom:10px;transition:color 0.15s;}
+.footer-col a:hover{color:var(--text);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:32px;border-top:1px solid var(--border);}
+.footer-bottom p{font-size:13px;color:var(--text3);font-family:var(--mono);}
+.footer-social{display:flex;gap:16px;}
+.footer-social a{color:var(--text3);transition:color 0.15s;font-family:var(--mono);font-size:13px;}
+.footer-social a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 148 50" width="148" height="50" aria-label="MDS Marketing Agency" style="display:block;">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#F0EDE6"/>
+          <stop offset="48%"  stop-color="#F0EDE6"/>
+          <stop offset="72%"  stop-color="#C4AE92"/>
+          <stop offset="100%" stop-color="#B09070"/>
+        </linearGradient>
+      </defs>
+      <text x="0" y="36" font-family="DM Sans,sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="url(#g)">MDS</text>
+      <text x="2" y="48" font-family="DM Sans,sans-serif" font-weight="400" font-size="8" letter-spacing="3.2" fill="#C4AE92">MARKETING AGENCY</text>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Work</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#contact">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a href="#contact" class="btn-primary" style="text-decoration:none;">Get a Free Quote</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="hero-badge-dot">✦</span>
+    Now accepting new clients — Southern California
+  </div>
+  <h1>Get more customers.<br/><em>Look like the best option.</em></h1>
+  <p class="hero-sub">MDS Agency builds websites and online presence for home service businesses in Southern California. If your competitors look better online than you — you're already losing jobs.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-lg btn-lg-accent" style="text-decoration:none;">See What We Build</a>
+    <a href="#contact" class="btn-lg btn-lg-outline" style="text-decoration:none;">Get a Free Quote →</a>
+  </div>
+  <p class="hero-note">No long-term contracts · Project-based or monthly</p>
+
+  <div class="hero-mockup">
+    <div class="mockup-window">
+      <div class="mockup-bar">
+        <div class="mockup-dot" style="background:#ff5f57;"></div>
+        <div class="mockup-dot" style="background:#febc2e;"></div>
+        <div class="mockup-dot" style="background:#28c840;"></div>
+        <div class="mockup-nav-tabs">
+          <span class="mockup-tab active">client-website</span>
+          <span class="mockup-tab">web-design</span>
+          <span class="mockup-tab">Go Live</span>
+        </div>
+        <div style="margin-left:auto;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:11px;color:var(--text3);background:rgba(240,237,230,0.05);padding:3px 8px;border-radius:4px;border:1px solid var(--border);font-family:var(--mono);">Active Project</span>
+        </div>
+      </div>
+      <div class="mockup-canvas">
+        <div class="mockup-canvas-grid"></div>
+        <div class="mockup-nodes">
+          <!-- Homepage Design -->
+          <div class="mockup-node" style="position:relative;">
+            <div class="mockup-node-header">
+              <div class="mockup-node-icon" style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);">
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 9h14M3 13h8" stroke="#86efac" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <div class="mockup-node-name">Homepage Design</div>
+                <div class="mockup-node-sub">Day 1–3</div>
+              </div>
+            </div>
+            <div class="mockup-node-status">
+              <div class="status-dot status-green"></div>
+              <span style="font-size:11px;color:#86efac;">Complete ✓</span>
+            </div>
+            <div class="mockup-connector"></div>
+          </div>
+          <!-- Development -->
+          <div class="mockup-node featured" style="position:relative;">
+            <div class="mockup-node-header">
+              <div class="mockup-node-icon" style="background:var(--accent-dim);border:1px solid rgba(196,174,146,0.25);">
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M6 8l-4 4 4 4M14 8l4 4-4 4M11 5l-2 10" stroke="#C4AE92" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="mockup-node-name">Development</div>
+                <div class="mockup-node-sub">Day 3–5 · Active</div>
+              </div>
+            </div>
+            <div class="mockup-node-status">
+              <div class="status-dot status-green status-pulse"></div>
+              <span style="font-size:11px;color:#86efac;">In progress</span>
+            </div>
+            <div class="mockup-node-metric"><span>Completion</span><span>80%</span></div>
+            <div class="mockup-connector"></div>
+          </div>
+          <!-- Launch Prep -->
+          <div class="mockup-node" style="position:relative;">
+            <div class="mockup-node-header">
+              <div class="mockup-node-icon" style="background:rgba(250,204,21,0.08);border:1px solid rgba(250,204,21,0.18);">
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="#fcd34d" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="mockup-node-name">Launch Prep</div>
+                <div class="mockup-node-sub">Day 6–7 · Queued</div>
+              </div>
+            </div>
+            <div class="mockup-node-status">
+              <div class="status-dot status-yellow"></div>
+              <span style="font-size:11px;color:#fcd34d;">Queued</span>
+            </div>
+            <div class="mockup-node-metric"><span>Assets</span><span>0 / 4</span></div>
+            <div class="mockup-connector"></div>
+          </div>
+          <!-- Go Live -->
+          <div class="mockup-node">
+            <div class="mockup-node-header">
+              <div class="mockup-node-icon" style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);">
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5.5L18 8.5l-4 3.9 1 5.6L10 15.3 5 18l1-5.6L2 8.5l5.5-1L10 2z" stroke="#86efac" stroke-width="1.4" fill="none"/></svg>
+              </div>
+              <div>
+                <div class="mockup-node-name">Go Live</div>
+                <div class="mockup-node-sub">Day 7 · Planned</div>
+              </div>
+            </div>
+            <div class="mockup-node-status">
+              <div class="status-dot" style="background:rgba(240,237,230,0.3);"></div>
+              <span style="font-size:11px;color:var(--text3);">Pending</span>
+            </div>
+            <div class="mockup-node-metric"><span>Timeline</span><span>Day 7</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURES GRID ─── -->
+<section id="services" style="padding:100px 32px;border-top:1px solid var(--border);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:64px;">
+      <div class="feature-tag">Services</div>
+      <h2 style="font-size:clamp(28px,4vw,44px);font-weight:600;letter-spacing:-0.025em;max-width:560px;margin:0 auto;">Everything you need to win more jobs online</h2>
+    </div>
+    <div class="features-grid">
+
+      <!-- Brand Strategy -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L17 6v8L10 18 3 14V6L10 2Z" stroke="#C4AE92" stroke-width="1.5"/><path d="M10 2v16M3 6l7 4 7-4" stroke="#C4AE92" stroke-width="1.5"/></svg>
+        </div>
+        <div class="feature-tag">Web Design</div>
+        <h3>A website that actually<br/>brings in calls</h3>
+        <p>Most home service businesses have websites that look outdated or don't show up on Google. We build clean, fast, mobile-first sites that turn visitors into booked jobs.</p>
+        <div class="feature-visual">
+          <div style="border-radius:10px;border:1px solid var(--border);overflow:hidden;">
+            <!-- Browser chrome -->
+            <div style="height:32px;background:var(--bg3);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;padding:0 12px;">
+              <div style="display:flex;gap:4px;flex-shrink:0;">
+                <div style="width:8px;height:8px;border-radius:50%;background:#ff5f57;"></div>
+                <div style="width:8px;height:8px;border-radius:50%;background:#febc2e;"></div>
+                <div style="width:8px;height:8px;border-radius:50%;background:#28c840;"></div>
+              </div>
+              <div style="flex:1;background:rgba(240,237,230,0.06);border:1px solid var(--border);border-radius:4px;height:18px;display:flex;align-items:center;padding:0 8px;">
+                <span style="font-size:10px;color:var(--text3);font-family:var(--mono);">yourclient.com</span>
+              </div>
+            </div>
+            <!-- Page content -->
+            <div style="padding:16px 18px;background:var(--bg);display:flex;flex-direction:column;gap:10px;">
+              <div style="height:11px;background:rgba(240,237,230,0.7);border-radius:3px;width:58%;"></div>
+              <div style="height:7px;background:rgba(240,237,230,0.18);border-radius:3px;width:82%;"></div>
+              <div style="height:7px;background:rgba(240,237,230,0.12);border-radius:3px;width:68%;"></div>
+              <div style="height:56px;background:rgba(240,237,230,0.04);border:1px solid var(--border);border-radius:6px;margin:2px 0;display:flex;align-items:center;justify-content:center;">
+                <span style="font-size:10px;color:var(--text3);font-family:var(--mono);">[ Hero Image ]</span>
+              </div>
+              <div style="width:110px;height:26px;background:var(--accent);border-radius:5px;display:flex;align-items:center;justify-content:center;">
+                <span style="font-size:11px;color:var(--bg);font-weight:500;">Get a Free Quote</span>
+              </div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text3);text-align:center;margin-top:10px;font-family:var(--mono);">Mobile-first · Fast · Built to convert</div>
+        </div>
+      </div>
+
+      <!-- Creative & Design -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="3" stroke="#C4AE92" stroke-width="1.5"/><path d="M6 10h8M10 6v8" stroke="#C4AE92" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="feature-tag">Strategy</div>
+        <h3>Know exactly what to say<br/>and who to say it to</h3>
+        <p>We figure out what makes your business the obvious choice — then build everything around that. No fluff, just positioning that gets you calls.</p>
+        <div class="feature-visual">
+          <div style="border-radius:10px;border:1px solid var(--border);background:var(--bg);padding:16px 18px;display:flex;flex-direction:column;gap:11px;">
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);">
+              <span style="color:#22c55e;font-weight:600;font-size:12px;">✓</span>Target audience defined
+            </div>
+            <div style="height:1px;background:var(--border);"></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);">
+              <span style="color:#22c55e;font-weight:600;font-size:12px;">✓</span>Competitor analysis done
+            </div>
+            <div style="height:1px;background:var(--border);"></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);">
+              <span style="color:#22c55e;font-weight:600;font-size:12px;">✓</span>Positioning statement locked
+            </div>
+            <div style="height:1px;background:var(--border);"></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text3);">
+              <span style="color:var(--accent);font-size:12px;">→</span>Content plan: <span style="color:var(--accent);margin-left:2px;">in progress</span>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text3);text-align:center;margin-top:10px;font-family:var(--mono);">Your roadmap to more calls</div>
+        </div>
+      </div>
+
+      <!-- Audience Growth -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 16l4-8 4 4 3-6 5 10" stroke="#C4AE92" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="feature-tag">Content &amp; Ads</div>
+        <h3>Content and ads that work<br/>while you're on the job</h3>
+        <p>Short-form video, social content, and paid ads built for local businesses. Show up where your customers are already scrolling.</p>
+        <div class="feature-visual">
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="font-size:16px;">📍</span>
+              <div style="flex:1;">
+                <div style="font-size:12px;color:var(--text3);font-family:var(--mono);">Google Business</div>
+                <div style="font-size:13px;color:#86efac;margin-top:2px;">+340 views this month</div>
+              </div>
+            </div>
+            <div style="height:1px;background:var(--border);"></div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="font-size:16px;">📱</span>
+              <div style="flex:1;">
+                <div style="font-size:12px;color:var(--text3);font-family:var(--mono);">Instagram reach</div>
+                <div style="font-size:13px;color:var(--accent2);margin-top:2px;">2.1k local accounts</div>
+              </div>
+            </div>
+            <div style="height:1px;background:var(--border);"></div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="font-size:16px;">📣</span>
+              <div style="flex:1;">
+                <div style="font-size:12px;color:var(--text3);font-family:var(--mono);">Ad campaign</div>
+                <div style="font-size:13px;color:#86efac;margin-top:2px;">14 leads generated</div>
+              </div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text3);text-align:center;margin-top:10px;font-family:var(--mono);">Real results for local businesses</div>
+        </div>
+      </div>
+
+      <!-- Analytics -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="#C4AE92" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="7" stroke="#C4AE92" stroke-width="1.5"/></svg>
+        </div>
+        <div class="feature-tag">Results</div>
+        <h3>You'll always know<br/>what's working</h3>
+        <p>Simple monthly reports showing leads, traffic, and what's driving calls. No confusing dashboards — just clear numbers and next steps.</p>
+        <div class="feature-visual">
+          <div class="log-stream">
+            <div class="log-line"><span class="log-time">Apr 07</span><span class="log-level-info">WIN</span><span class="log-msg">New lead from Google search</span></div>
+            <div class="log-line"><span class="log-time">Apr 08</span><span class="log-level-info">WIN</span><span class="log-msg">Website traffic up 28% MoM</span></div>
+            <div class="log-line"><span class="log-time">Apr 09</span><span class="log-level-warn">OPT</span><span class="log-msg">Add more photos to GMB profile</span></div>
+            <div class="log-line"><span class="log-time">Apr 10</span><span class="log-level-info">WIN</span><span class="log-msg">3 quote requests this week</span></div>
+            <div class="log-line"><span class="log-time">Apr 10</span><span class="log-level-err">FIX</span><span class="log-msg">Contact form response time</span></div>
+            <div class="log-line"><span class="log-time">Apr 11</span><span class="log-level-info">WIN</span><span class="log-msg">Booked 2 new jobs from site</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full-service process - wide -->
+      <div class="feature-card wide" id="process">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+          <div>
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4h12v9a2 2 0 01-2 2H6a2 2 0 01-2-2V4Z" stroke="#C4AE92" stroke-width="1.5"/><path d="M8 4V2M12 4V2M4 8h12" stroke="#C4AE92" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="feature-tag">Process</div>
+            <h3>Simple process.<br/>Fast results.</h3>
+            <p>Most agencies take months. We move in days. You'll have a rough draft in 72 hours, a full site ready for review within a week, and go live shortly after you approve it.</p>
+            <a href="#contact" class="section-link" style="margin-top:20px;display:inline-flex;">Get started →</a>
+          </div>
+          <div class="deploy-steps">
+            <div class="deploy-step">
+              <div class="step-icon step-done">✓</div>
+              <div><div class="step-name">Discovery call</div></div>
+              <div class="step-time">Day 1</div>
+            </div>
+            <div class="deploy-step">
+              <div class="step-icon step-done">✓</div>
+              <div><div class="step-name">Rough draft delivered</div></div>
+              <div class="step-time">Day 3</div>
+            </div>
+            <div class="deploy-step">
+              <div class="step-icon step-done">✓</div>
+              <div><div class="step-name">You review + approve</div></div>
+              <div class="step-time">Day 4</div>
+            </div>
+            <div class="deploy-step" style="opacity:0.4;">
+              <div class="step-icon step-pending">·</div>
+              <div><div class="step-name">Revisions complete</div></div>
+              <div class="step-time">Day 5</div>
+            </div>
+            <div class="deploy-step" style="opacity:0.4;">
+              <div class="step-icon step-pending">·</div>
+              <div><div class="step-name">Final review</div></div>
+              <div class="step-time">Day 6</div>
+            </div>
+            <div class="deploy-step" style="opacity:0.4;">
+              <div class="step-icon step-pending">·</div>
+              <div><div class="step-name">Go live ✓</div></div>
+              <div class="step-time">Day 7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="cta-section" id="contact">
+  <div class="feature-tag">Get started</div>
+  <h2>Ready to look like the best<br/>option in your area?</h2>
+  <p>Most of your competitors have bad websites. That's your advantage — if you move first. We only take a few clients per month.</p>
+  <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+    <a href="#" class="btn-lg btn-lg-accent" style="text-decoration:none;" onclick="openCalendly(event)">Book a Free Call</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg viewBox="0 0 148 50" width="148" height="50" aria-label="MDS Marketing Agency" style="display:block;">
+            <defs>
+              <linearGradient id="gf" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"   stop-color="#F0EDE6"/>
+                <stop offset="48%"  stop-color="#F0EDE6"/>
+                <stop offset="72%"  stop-color="#C4AE92"/>
+                <stop offset="100%" stop-color="#B09070"/>
+              </linearGradient>
+            </defs>
+            <text x="0" y="36" font-family="DM Sans,sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="url(#gf)">MDS</text>
+            <text x="2" y="48" font-family="DM Sans,sans-serif" font-weight="400" font-size="8" letter-spacing="3.2" fill="#C4AE92">MARKETING AGENCY</text>
+          </svg>
+        </div>
+        <p>Helping home service businesses look like the obvious choice online.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#">Brand Strategy</a>
+        <a href="#">Web &amp; Digital</a>
+        <a href="#">Content &amp; Ads</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MDS Agency. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<script>
+  function openCalendly(e) {
+    e.preventDefault();
+    Calendly.initPopupWidget({ url: 'https://calendly.com/steeledmorgan/30min' });
+  }
+</script>
+</body>
+</html>
