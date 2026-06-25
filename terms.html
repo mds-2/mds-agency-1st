@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme:dark;scroll-behavior:smooth;">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms of Service — MDS Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:         #1F1F1F;
+  --bg2:        #2E2E2E;
+  --bg3:        #333333;
+  --border:     rgba(240,237,230,0.08);
+  --border2:    rgba(240,237,230,0.12);
+  --text:       #F0EDE6;
+  --text2:      rgba(240,237,230,0.55);
+  --text3:      rgba(240,237,230,0.32);
+  --accent:     #C4AE92;
+  --accent2:    #D4C4B0;
+  --accent3:    #E0D4C0;
+  --accent-dim: rgba(196,174,146,0.12);
+  --radius:     12px;
+  --radius-lg:  16px;
+  --sans:       'DM Sans', sans-serif;
+  --mono:       'DM Mono', monospace;
+}
+html{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{min-height:100vh;overflow-x:hidden;background-image:radial-gradient(rgba(196,174,146,0.06) 1px,transparent 1px);background-size:32px 32px;background-position:0 0;}
+a{color:inherit;text-decoration:none;}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 32px;height:60px;
+  background:rgba(31,31,31,0.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:-0.01em;}
+.btn-primary{
+  padding:6px 16px;border-radius:8px;font-size:14px;font-weight:500;
+  background:var(--accent);color:var(--bg);border:none;
+  transition:opacity 0.15s;text-decoration:none;
+}
+.btn-primary:hover{opacity:0.9;}
+
+/* ─── LEGAL CONTENT ─── */
+.legal{
+  max-width:720px;
+  margin:0 auto;
+  padding:120px 32px 80px;
+}
+.legal-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:5px 12px;border-radius:999px;
+  background:rgba(196,174,146,0.1);border:1px solid rgba(196,174,146,0.25);
+  font-size:12px;color:var(--accent3);margin-bottom:24px;
+  font-family:var(--mono);letter-spacing:0.06em;text-transform:uppercase;
+}
+.legal h1{
+  font-size:clamp(32px,4.5vw,44px);font-weight:600;letter-spacing:-0.03em;
+  line-height:1.1;margin-bottom:12px;
+}
+.legal-date{
+  font-family:var(--mono);font-size:13px;color:var(--text3);
+  letter-spacing:0.04em;margin-bottom:48px;
+}
+.legal h2{
+  font-size:18px;font-weight:500;letter-spacing:-0.01em;
+  color:var(--text);margin-top:40px;margin-bottom:14px;
+}
+.legal p{
+  font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:14px;
+}
+.legal ul,.legal ol{
+  padding-left:20px;margin-bottom:14px;
+}
+.legal li{
+  font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:6px;
+}
+.legal a{color:var(--accent);transition:color 0.15s;}
+.legal a:hover{color:var(--accent2);}
+.legal strong{color:var(--text);font-weight:500;}
+
+/* ─── FOOTER ─── */
+footer{
+  border-top:1px solid var(--border);padding:60px 32px 40px;
+}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px;}
+.footer-brand p{font-size:14px;color:var(--text3);margin-top:12px;line-height:1.65;max-width:260px;}
+.footer-col h4{font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px;font-family:var(--mono);}
+.footer-col a{display:block;font-size:14px;color:var(--text2);margin-bottom:10px;transition:color 0.15s;}
+.footer-col a:hover{color:var(--text);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:32px;border-top:1px solid var(--border);}
+.footer-bottom p{font-size:13px;color:var(--text3);font-family:var(--mono);}
+.footer-social{display:flex;gap:16px;}
+.footer-social a{color:var(--text3);transition:color 0.15s;font-family:var(--mono);font-size:13px;}
+.footer-social a:hover{color:var(--text);}
+
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .legal{padding:100px 20px 60px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;gap:16px;align-items:flex-start;}
+}
+@media(max-width:480px){
+  .footer-top{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg viewBox="0 0 148 50" width="148" height="50" aria-label="MDS Marketing Agency" style="display:block;">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#F0EDE6"/>
+          <stop offset="48%"  stop-color="#F0EDE6"/>
+          <stop offset="72%"  stop-color="#C4AE92"/>
+          <stop offset="100%" stop-color="#B09070"/>
+        </linearGradient>
+      </defs>
+      <text x="0" y="36" font-family="DM Sans,sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="url(#g)">MDS</text>
+      <text x="2" y="48" font-family="DM Sans,sans-serif" font-weight="400" font-size="8" letter-spacing="3.2" fill="#C4AE92">MARKETING AGENCY</text>
+    </svg>
+  </a>
+  <a href="/" class="btn-primary">Back to Home</a>
+</nav>
+
+<!-- ─── CONTENT ─── -->
+<main class="legal">
+  <div class="legal-badge">Legal</div>
+  <h1>Terms of Service</h1>
+  <p class="legal-date">Last updated: June 24, 2026</p>
+
+  <h2>1. Agreement to Terms</h2>
+  <p>These Terms of Service ("Terms") govern your access to and use of the website, services, and products provided by MDS Agency ("Company," "we," "us," or "our"), a marketing automation agency operating at themdsagency.com. By accessing our website or engaging our services, you agree to be bound by these Terms. If you do not agree, do not use our services.</p>
+
+  <h2>2. Services</h2>
+  <p>MDS Agency provides marketing automation and digital marketing services, including but not limited to:</p>
+  <ul>
+    <li>Missed-call text-back automation</li>
+    <li>SMS and text message marketing campaigns</li>
+    <li>Website design and development</li>
+    <li>Brand strategy and identity</li>
+    <li>Social media management and content creation</li>
+    <li>Paid advertising (Meta, Google, TikTok)</li>
+    <li>Search engine optimization (SEO)</li>
+    <li>Marketing funnel and workflow automation</li>
+  </ul>
+  <p>The specific scope, deliverables, and pricing of services will be outlined in a separate service agreement or proposal provided to each client.</p>
+
+  <h2>3. SMS and Text Messaging Terms</h2>
+  <p>By providing your phone number and opting in to receive text messages from MDS Agency or through services we operate on behalf of our clients, you agree to the following:</p>
+  <ul>
+    <li><strong>Consent:</strong> You consent to receive automated text messages, including but not limited to appointment reminders, follow-up messages, missed-call text-back responses, marketing messages, and service notifications at the phone number you provide.</li>
+    <li><strong>Message Frequency:</strong> Message frequency varies based on the services you have opted into. You may receive recurring messages.</li>
+    <li><strong>Opt-Out:</strong> You may opt out of receiving text messages at any time by replying <strong>STOP</strong> to any message. Upon opting out, you will receive a one-time confirmation message and no further messages will be sent.</li>
+    <li><strong>Help:</strong> Reply <strong>HELP</strong> to any message for support information.</li>
+    <li><strong>Message and Data Rates:</strong> Message and data rates may apply. Check with your mobile carrier for details.</li>
+    <li><strong>Carriers:</strong> Carriers are not liable for delayed or undelivered messages.</li>
+    <li><strong>No Mobile Information Sharing:</strong> We do not sell, rent, loan, trade, lease, or otherwise transfer for profit any phone numbers or personal information collected through our SMS programs to any third party.</li>
+  </ul>
+  <p>Consent to receive text messages is not a condition of purchasing any goods or services from MDS Agency.</p>
+
+  <h2>4. Client Responsibilities</h2>
+  <p>As a client of MDS Agency, you agree to:</p>
+  <ul>
+    <li>Provide accurate, complete, and timely information necessary for the performance of services.</li>
+    <li>Ensure that any content, materials, or data you provide do not infringe on any third-party intellectual property rights.</li>
+    <li>Comply with all applicable laws and regulations, including but not limited to the Telephone Consumer Protection Act (TCPA), CAN-SPAM Act, and applicable state regulations regarding text message marketing.</li>
+    <li>Obtain proper consent from your own customers before enrolling them in any text messaging or automated communication program operated by MDS Agency on your behalf.</li>
+  </ul>
+
+  <h2>5. Intellectual Property</h2>
+  <p>All content, designs, code, strategies, and materials created by MDS Agency remain the intellectual property of MDS Agency until full payment has been received for the applicable project or service. Upon full payment, ownership of deliverables transfers to the client unless otherwise specified in a separate agreement.</p>
+  <p>MDS Agency retains the right to display completed work in portfolios, case studies, and marketing materials unless otherwise agreed in writing.</p>
+
+  <h2>6. Payment Terms</h2>
+  <p>Payment terms are outlined in individual service agreements. Unless otherwise specified:</p>
+  <ul>
+    <li>Invoices are due upon receipt or within the timeframe stated in the service agreement.</li>
+    <li>Late payments may incur a fee of 1.5% per month on the outstanding balance.</li>
+    <li>MDS Agency reserves the right to suspend or terminate services for non-payment.</li>
+  </ul>
+
+  <h2>7. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, MDS Agency shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services, including but not limited to loss of revenue, loss of data, or business interruption.</p>
+  <p>Our total liability for any claim arising from or related to our services shall not exceed the total amount paid by you to MDS Agency for the specific service giving rise to the claim during the twelve (12) months preceding the event.</p>
+
+  <h2>8. Disclaimers</h2>
+  <p>MDS Agency does not guarantee specific results from marketing campaigns, advertising, SEO, or any other service. Marketing outcomes depend on numerous factors outside our control, including market conditions, client industry, competition, and consumer behavior.</p>
+  <p>Our services are provided "as is" and "as available" without warranties of any kind, either express or implied.</p>
+
+  <h2>9. Indemnification</h2>
+  <p>You agree to indemnify, defend, and hold harmless MDS Agency and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorneys' fees) arising from your use of our services, your violation of these Terms, or your violation of any applicable law or the rights of any third party.</p>
+
+  <h2>10. Termination</h2>
+  <p>Either party may terminate the service relationship by providing written notice as specified in the applicable service agreement. MDS Agency reserves the right to terminate services immediately if the client breaches these Terms or engages in conduct that is unlawful or harmful to MDS Agency's reputation.</p>
+  <p>Upon termination, the client is responsible for payment for all services rendered up to the date of termination.</p>
+
+  <h2>11. Governing Law</h2>
+  <p>These Terms shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved in the courts located in the State of Texas.</p>
+
+  <h2>12. Changes to These Terms</h2>
+  <p>We reserve the right to update or modify these Terms at any time. Changes will be effective upon posting the revised Terms on this page with an updated "Last updated" date. Your continued use of our services after any changes constitutes acceptance of the updated Terms.</p>
+
+  <h2>13. Contact Us</h2>
+  <p>If you have any questions about these Terms of Service, please contact us:</p>
+  <p>
+    <strong>MDS Agency</strong><br>
+    [YOUR ADDRESS]<br>
+    Phone: [YOUR PHONE]<br>
+    Email: <a href="mailto:hello@mdsmarketing.com">hello@mdsmarketing.com</a><br>
+    Website: <a href="https://themdsagency.com">themdsagency.com</a>
+  </p>
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg viewBox="0 0 148 50" width="148" height="50" aria-label="MDS Marketing Agency" style="display:block;">
+            <defs>
+              <linearGradient id="gf" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"   stop-color="#F0EDE6"/>
+                <stop offset="48%"  stop-color="#F0EDE6"/>
+                <stop offset="72%"  stop-color="#C4AE92"/>
+                <stop offset="100%" stop-color="#B09070"/>
+              </linearGradient>
+            </defs>
+            <text x="0" y="36" font-family="DM Sans,sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="url(#gf)">MDS</text>
+            <text x="2" y="48" font-family="DM Sans,sans-serif" font-weight="400" font-size="8" letter-spacing="3.2" fill="#C4AE92">MARKETING AGENCY</text>
+          </svg>
+        </div>
+        <p>Helping home service businesses look like the obvious choice online.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/">Brand Strategy</a>
+        <a href="/">Web &amp; Digital</a>
+        <a href="/">Content &amp; Ads</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/">About</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MDS Agency. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

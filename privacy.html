@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme:dark;scroll-behavior:smooth;">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — MDS Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:         #1F1F1F;
+  --bg2:        #2E2E2E;
+  --bg3:        #333333;
+  --border:     rgba(240,237,230,0.08);
+  --border2:    rgba(240,237,230,0.12);
+  --text:       #F0EDE6;
+  --text2:      rgba(240,237,230,0.55);
+  --text3:      rgba(240,237,230,0.32);
+  --accent:     #C4AE92;
+  --accent2:    #D4C4B0;
+  --accent3:    #E0D4C0;
+  --accent-dim: rgba(196,174,146,0.12);
+  --radius:     12px;
+  --radius-lg:  16px;
+  --sans:       'DM Sans', sans-serif;
+  --mono:       'DM Mono', monospace;
+}
+html{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{min-height:100vh;overflow-x:hidden;background-image:radial-gradient(rgba(196,174,146,0.06) 1px,transparent 1px);background-size:32px 32px;background-position:0 0;}
+a{color:inherit;text-decoration:none;}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 32px;height:60px;
+  background:rgba(31,31,31,0.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:-0.01em;}
+.btn-primary{
+  padding:6px 16px;border-radius:8px;font-size:14px;font-weight:500;
+  background:var(--accent);color:var(--bg);border:none;
+  transition:opacity 0.15s;text-decoration:none;
+}
+.btn-primary:hover{opacity:0.9;}
+
+/* ─── LEGAL CONTENT ─── */
+.legal{
+  max-width:720px;
+  margin:0 auto;
+  padding:120px 32px 80px;
+}
+.legal-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:5px 12px;border-radius:999px;
+  background:rgba(196,174,146,0.1);border:1px solid rgba(196,174,146,0.25);
+  font-size:12px;color:var(--accent3);margin-bottom:24px;
+  font-family:var(--mono);letter-spacing:0.06em;text-transform:uppercase;
+}
+.legal h1{
+  font-size:clamp(32px,4.5vw,44px);font-weight:600;letter-spacing:-0.03em;
+  line-height:1.1;margin-bottom:12px;
+}
+.legal-date{
+  font-family:var(--mono);font-size:13px;color:var(--text3);
+  letter-spacing:0.04em;margin-bottom:48px;
+}
+.legal h2{
+  font-size:18px;font-weight:500;letter-spacing:-0.01em;
+  color:var(--text);margin-top:40px;margin-bottom:14px;
+}
+.legal p{
+  font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:14px;
+}
+.legal ul,.legal ol{
+  padding-left:20px;margin-bottom:14px;
+}
+.legal li{
+  font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:6px;
+}
+.legal a{color:var(--accent);transition:color 0.15s;}
+.legal a:hover{color:var(--accent2);}
+.legal strong{color:var(--text);font-weight:500;}
+
+/* ─── FOOTER ─── */
+footer{
+  border-top:1px solid var(--border);padding:60px 32px 40px;
+}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px;}
+.footer-brand p{font-size:14px;color:var(--text3);margin-top:12px;line-height:1.65;max-width:260px;}
+.footer-col h4{font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px;font-family:var(--mono);}
+.footer-col a{display:block;font-size:14px;color:var(--text2);margin-bottom:10px;transition:color 0.15s;}
+.footer-col a:hover{color:var(--text);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:32px;border-top:1px solid var(--border);}
+.footer-bottom p{font-size:13px;color:var(--text3);font-family:var(--mono);}
+.footer-social{display:flex;gap:16px;}
+.footer-social a{color:var(--text3);transition:color 0.15s;font-family:var(--mono);font-size:13px;}
+.footer-social a:hover{color:var(--text);}
+
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .legal{padding:100px 20px 60px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;gap:16px;align-items:flex-start;}
+}
+@media(max-width:480px){
+  .footer-top{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg viewBox="0 0 148 50" width="148" height="50" aria-label="MDS Marketing Agency" style="display:block;">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#F0EDE6"/>
+          <stop offset="48%"  stop-color="#F0EDE6"/>
+          <stop offset="72%"  stop-color="#C4AE92"/>
+          <stop offset="100%" stop-color="#B09070"/>
+        </linearGradient>
+      </defs>
+      <text x="0" y="36" font-family="DM Sans,sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="url(#g)">MDS</text>
+      <text x="2" y="48" font-family="DM Sans,sans-serif" font-weight="400" font-size="8" letter-spacing="3.2" fill="#C4AE92">MARKETING AGENCY</text>
+    </svg>
+  </a>
+  <a href="/" class="btn-primary">Back to Home</a>
+</nav>
+
+<!-- ─── CONTENT ─── -->
+<main class="legal">
+  <div class="legal-badge">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="legal-date">Last updated: June 24, 2026</p>
+
+  <h2>1. Introduction</h2>
+  <p>MDS Agency ("Company," "we," "us," or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at themdsagency.com, engage our services, or interact with us through text messaging or other communication channels.</p>
+  <p>Please read this Privacy Policy carefully. By using our website or services, you consent to the practices described in this policy.</p>
+
+  <h2>2. Information We Collect</h2>
+  <p>We may collect the following types of information:</p>
+
+  <p><strong>Personal Information You Provide</strong></p>
+  <ul>
+    <li>Name, email address, phone number, and mailing address</li>
+    <li>Business name and industry</li>
+    <li>Payment and billing information</li>
+    <li>Any other information you voluntarily provide through forms, emails, phone calls, or text messages</li>
+  </ul>
+
+  <p><strong>Information Collected Automatically</strong></p>
+  <ul>
+    <li>IP address, browser type, operating system, and device information</li>
+    <li>Pages visited, time spent on pages, and referring URLs</li>
+    <li>Cookies, pixel tags, and similar tracking technologies</li>
+  </ul>
+
+  <p><strong>SMS and Text Message Data</strong></p>
+  <ul>
+    <li>Phone numbers provided for text message communications</li>
+    <li>Opt-in and opt-out status for text messaging programs</li>
+    <li>Message content and delivery status for service-related communications</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <p>We use the information we collect for the following purposes:</p>
+  <ul>
+    <li>To provide, maintain, and improve our marketing and automation services</li>
+    <li>To send text messages you have opted in to receive, including missed-call text-back responses, appointment reminders, follow-ups, and marketing messages</li>
+    <li>To communicate with you about your account, projects, and service updates</li>
+    <li>To process transactions and send related billing information</li>
+    <li>To analyze website usage and improve user experience</li>
+    <li>To comply with legal obligations and enforce our Terms of Service</li>
+  </ul>
+
+  <h2>4. SMS Data and Privacy</h2>
+  <p>We take your mobile privacy seriously. Regarding text message data:</p>
+  <ul>
+    <li><strong>No Selling of Data:</strong> We do not sell, rent, loan, trade, lease, or otherwise transfer for profit any phone numbers or personal information collected through our SMS or text messaging programs to any third party.</li>
+    <li><strong>No Sharing for Marketing:</strong> Your phone number and SMS opt-in data will not be shared with third parties for their marketing purposes.</li>
+    <li><strong>Service Providers Only:</strong> We may share phone numbers with service providers (such as SMS platform providers) solely for the purpose of delivering text messages you have consented to receive. These providers are contractually obligated to protect your data and use it only for the services we have engaged them to provide.</li>
+    <li><strong>Opt-Out:</strong> You can opt out of text messages at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for support.</li>
+  </ul>
+
+  <h2>5. How We Share Your Information</h2>
+  <p>We do not sell your personal information. We may share your information only in the following circumstances:</p>
+  <ul>
+    <li><strong>Service Providers:</strong> With trusted third-party vendors who assist in operating our business (e.g., payment processors, email platforms, SMS delivery platforms, analytics providers). These parties are bound by confidentiality obligations.</li>
+    <li><strong>Legal Requirements:</strong> When required by law, regulation, legal process, or governmental request.</li>
+    <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</li>
+    <li><strong>With Your Consent:</strong> When you have given us explicit permission to share your information for a specific purpose.</li>
+  </ul>
+
+  <h2>6. Cookies and Tracking Technologies</h2>
+  <p>Our website may use cookies and similar technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. You can control cookie preferences through your browser settings. Disabling cookies may affect site functionality.</p>
+  <p>We may use the following types of cookies:</p>
+  <ul>
+    <li><strong>Essential Cookies:</strong> Required for basic site functionality.</li>
+    <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our site.</li>
+    <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertising and track campaign performance.</li>
+  </ul>
+
+  <h2>7. Data Retention</h2>
+  <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When your data is no longer needed, we will securely delete or anonymize it.</p>
+
+  <h2>8. Data Security</h2>
+  <p>We implement reasonable administrative, technical, and physical safeguards to protect your personal information from unauthorized access, use, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+  <h2>9. Your Rights Under GDPR (European Users)</h2>
+  <p>If you are located in the European Economic Area (EEA), you have the following rights under the General Data Protection Regulation (GDPR):</p>
+  <ul>
+    <li><strong>Right of Access:</strong> Request a copy of the personal data we hold about you.</li>
+    <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+    <li><strong>Right to Erasure:</strong> Request deletion of your personal data ("right to be forgotten").</li>
+    <li><strong>Right to Restrict Processing:</strong> Request that we limit the processing of your data.</li>
+    <li><strong>Right to Data Portability:</strong> Request a copy of your data in a structured, machine-readable format.</li>
+    <li><strong>Right to Object:</strong> Object to the processing of your personal data for certain purposes.</li>
+    <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent.</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:hello@mdsmarketing.com">hello@mdsmarketing.com</a>. We will respond within 30 days.</p>
+
+  <h2>10. Your Rights Under CCPA (California Residents)</h2>
+  <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):</p>
+  <ul>
+    <li>The right to know what personal information we collect, use, and disclose.</li>
+    <li>The right to request deletion of your personal information.</li>
+    <li>The right to opt out of the sale of your personal information (we do not sell personal information).</li>
+    <li>The right to non-discrimination for exercising your CCPA rights.</li>
+  </ul>
+  <p>To submit a CCPA request, contact us at <a href="mailto:hello@mdsmarketing.com">hello@mdsmarketing.com</a>.</p>
+
+  <h2>11. Children's Privacy</h2>
+  <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected data from a child without parental consent, we will take steps to delete that information promptly.</p>
+
+  <h2>12. Third-Party Links</h2>
+  <p>Our website may contain links to third-party websites or services that are not operated by us. We are not responsible for the privacy practices of these third parties. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+  <h2>13. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will post the updated policy on this page with a revised "Last updated" date. Your continued use of our services after changes are posted constitutes acceptance of the updated policy.</p>
+
+  <h2>14. Contact Us</h2>
+  <p>If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us:</p>
+  <p>
+    <strong>MDS Agency</strong><br>
+    [YOUR ADDRESS]<br>
+    Phone: [YOUR PHONE]<br>
+    Email: <a href="mailto:hello@mdsmarketing.com">hello@mdsmarketing.com</a><br>
+    Website: <a href="https://themdsagency.com">themdsagency.com</a>
+  </p>
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg viewBox="0 0 148 50" width="148" height="50" aria-label="MDS Marketing Agency" style="display:block;">
+            <defs>
+              <linearGradient id="gf" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"   stop-color="#F0EDE6"/>
+                <stop offset="48%"  stop-color="#F0EDE6"/>
+                <stop offset="72%"  stop-color="#C4AE92"/>
+                <stop offset="100%" stop-color="#B09070"/>
+              </linearGradient>
+            </defs>
+            <text x="0" y="36" font-family="DM Sans,sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="url(#gf)">MDS</text>
+            <text x="2" y="48" font-family="DM Sans,sans-serif" font-weight="400" font-size="8" letter-spacing="3.2" fill="#C4AE92">MARKETING AGENCY</text>
+          </svg>
+        </div>
+        <p>Helping home service businesses look like the obvious choice online.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/">Brand Strategy</a>
+        <a href="/">Web &amp; Digital</a>
+        <a href="/">Content &amp; Ads</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/">About</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MDS Agency. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
