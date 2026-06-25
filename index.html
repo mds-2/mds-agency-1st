@@ -29,7 +29,7 @@
   --sans:       'DM Sans', sans-serif;
   --mono:       'DM Mono', monospace;
 }
-html{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+html{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 body{min-height:100vh;overflow-x:hidden;background-image:radial-gradient(rgba(196,174,146,0.06) 1px,transparent 1px);background-size:32px 32px;background-position:0 0;}
 a{color:inherit;text-decoration:none;}
 button{cursor:pointer;font-family:inherit;}
@@ -343,6 +343,44 @@ footer{
 .footer-social{display:flex;gap:16px;}
 .footer-social a{color:var(--text3);transition:color 0.15s;font-family:var(--mono);font-size:13px;}
 .footer-social a:hover{color:var(--text);}
+
+/* ─── MOBILE ─── */
+@media(max-width:768px){
+  nav{padding:0 16px;}
+  .nav-links{display:none;}
+  .hero{padding:100px 20px 60px;}
+  .hero h1{font-size:clamp(32px,8vw,48px);}
+  .hero-sub{font-size:15px;}
+  .hero-mockup{padding:0 16px;margin-top:36px;}
+  .mockup-canvas{padding:20px 16px;min-height:auto;}
+  .mockup-nodes{flex-direction:column;gap:16px;}
+  .mockup-node{min-width:0;width:100%;}
+  .mockup-connector{display:none;}
+  .mockup-nav-tabs{display:none;}
+  .trusted{padding:40px 20px;}
+  .trusted-logos{gap:20px 32px;}
+  .logo-item{font-size:13px;}
+  .features{padding:60px 16px;}
+  .features-grid{grid-template-columns:1fr;}
+  .feature-card{padding:28px 20px;}
+  .feature-card.wide{grid-column:span 1;}
+  .feature-card.wide>div{grid-template-columns:1fr !important;gap:28px !important;}
+  .feature-card h3{font-size:19px;}
+  .section-full{padding:60px 20px;}
+  .section-full-inner{grid-template-columns:1fr;gap:40px;}
+  .section-full-inner.reverse{direction:ltr;}
+  .cta-section{padding:60px 20px;}
+  .cta-section h2{font-size:clamp(26px,6vw,36px);}
+  footer{padding:40px 20px 32px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+  .footer-bottom{flex-direction:column;gap:12px;align-items:flex-start;}
+  #services{padding:60px 16px !important;}
+}
+@media(max-width:480px){
+  .footer-top{grid-template-columns:1fr;}
+  .hero-ctas{flex-direction:column;width:100%;}
+  .btn-lg{width:100%;justify-content:center;}
+}
 </style>
 </head>
 <body>
